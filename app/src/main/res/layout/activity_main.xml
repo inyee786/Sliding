@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayoutLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+       tools:context="material.vivz.slidenerd.materialtest.MainActivity">
+
+        <include
+            android:id="@+id/app_bar"
+            layout="@layout/app_bar"/>
+
+        <materialtest.vivz.slidenerd.tabs.slidingTabLayout
+            android:id="@id/tabs"
+            android:layout_width="match_parent"
+            android:layout_hight="wrap_content"/>
+
+
+        <android.support.v4.view.viewpager
+            android:id="@id/pager"
+            android:layout_width="match_parent"
+            android:layout_hight="wrap_content"/>
+
+
+
+
+        </LinearLayoutLayout>
+
+        <fragment
+            android:id="@+id/fragement_navigation_drawer"
+            android:name="materialtest.vivz.slidenerd.materialtest.NavigationDrawerFragment"
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+           android:layout_gravity="start"
+            app:layout="@layout/fragement_navigation_drawer"
+            tools:layout="@layout/fragement_navigation_drawer" />
+
+
+
+
+   </android.support.v4.widget.DrawerLayout>
